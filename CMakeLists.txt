@@ -2,15 +2,7 @@ cmake_minimum_required(VERSION 3.22)
 
 project(AUDIO_PLUGIN_EXAMPLE VERSION 0.0.1)
 
-include(FetchContent)
-
-FetchContent_Declare(
-        JUCE
-        GIT_REPOSITORY https://github.com/juce-framework/JUCE.git
-        GIT_TAG        7.0.12
-)
-
-FetchContent_MakeAvailable(JUCE)
+add_subdirectory(JUCE)
 
 juce_add_plugin(AudioPluginExample
     PLUGIN_MANUFACTURER_CODE Juce
